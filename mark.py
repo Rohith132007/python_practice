@@ -1,12 +1,24 @@
-i = int(input('Enter the mark'));
-if(i>=90):
-    print('the student is first class');
-elif(i>=75):
-    print('the student is second class');
-elif(i>=65):
-    print('the student is third class');
-elif(i>=45):
-    print('the student is just pass');
+# Student Grade Calculator
+
+total = 0
+
+for i in range(1, 6):
+    mark = int(input(f"Enter mark {i}: "))
+    total += mark
+
+average = total / 5
+
+print("\nTotal Marks:", total)
+print("Average:", average)
+
+if average >= 90:
+    print("Grade: A")
+elif average >= 75:
+    print("Grade: B")
+elif average >= 60:
+    print("Grade: C")
+elif average >= 40:
+    print("Grade: D")
 else:
-    print('the student is fail');
+    print("Grade: F")
     
