@@ -1,0 +1,14 @@
+month = int(input())
+year = int(input())
+
+if month in (1, 3, 5, 7, 8, 10, 12):
+    days = 31
+elif month in (4, 6, 9, 11):
+    days = 30
+else:
+    if (year % 400 == 0) or (year % 4 == 0 and year % 100 != 0):
+        days = 29
+    else:
+        days = 28
+
+print("Number of days is", days)
