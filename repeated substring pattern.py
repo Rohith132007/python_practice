@@ -1,0 +1,35 @@
+'''
+
+================================ Leet Code Problem ================================
+
+class Solution:
+    def repeatedSubstringPattern(self, s: str) -> bool:
+        n = len(S)
+        for i in range(1, n // 2 + 1):
+            if n % i == 0 and s[:i] * (n // i) == s:
+                return True
+        return False
+
+class Solution:
+    def repeatedSubstringPattern(self, s: str) -> bool:
+        return s in (s + s)[1:-1]
+        
+====================================  Test Cases  ====================================
+
+'''
+s = "abcabc"
+
+n = len(s)
+
+for i in range(1, n // 2 + 1):
+    if n % i == 0 and s[:i] * (n // i) == s:
+        print(True)
+        break
+else:
+    print(False)
+    
+s = "abcabc"
+
+result = s in (s + s)[1:-1]
+
+print(result)
