@@ -1,0 +1,31 @@
+'''
+
+================================= Leetcode Problem ================================
+
+class Solution:
+    def canConstruct(self, ransomNote: str, magazine: str) -> bool:
+
+        for ch in ransomNote:
+            if ch in magazine:
+                magazine = magazine.replace(ch, "", 1)
+            else:
+                return False
+
+        return True
+
+================================ Test Cases ==================================
+
+'''
+
+
+ransomNote = "aa"
+magazine = "aab"
+
+for ch in ransomNote:
+    if ch in magazine:
+        magazine = magazine.replace(ch, "", 1)
+    else:
+        print(False)
+        break
+else:
+    print(True)
